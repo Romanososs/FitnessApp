@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_bar_lessons"
+        android:icon="@drawable/ic_calendar_today"
+        android:title="@string/nav_bar_lessons" />
+
+    <item
+        android:id="@+id/nav_bar_application"
+        android:icon="@drawable/ic_task_alt"
+        android:title="@string/nav_bar_application" />
+
+    <item
+        android:id="@+id/nav_bar_add"
+        android:icon="@drawable/ic_add_circle"
+        android:title="@string/nav_bar_add" />
+
+    <item
+        android:id="@+id/nav_bar_chat"
+        android:icon="@drawable/ic_chat_bubble"
+        android:title="@string/nav_bar_chat" />
+
+    <item
+        android:id="@+id/nav_bar_menu"
+        android:icon="@drawable/ic_more_horiz"
+        android:title="@string/nav_bar_menu" />
+
+</menu>

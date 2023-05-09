@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_bar_lessons">
+
+    <fragment
+        android:id="@+id/nav_bar_lessons"
+        android:name="com.example.fitnessapp.feature.schedule.ui.LessonsFragment"
+        android:label="@string/nav_bar_lessons"
+        tools:layout="@layout/fragment_lessons" />
+
+    <fragment
+        android:id="@+id/nav_bar_application"
+        android:name="com.example.fitnessapp.feature.other.ui.OtherFragment"
+        android:label="@string/nav_bar_application"
+        tools:layout="@layout/fragment" />
+
+    <fragment
+        android:id="@+id/nav_bar_add"
+        android:name="com.example.fitnessapp.feature.other.ui.OtherFragment"
+        android:label="@string/nav_bar_add"
+        tools:layout="@layout/fragment" />
+
+    <fragment
+        android:id="@+id/nav_bar_chat"
+        android:name="com.example.fitnessapp.feature.other.ui.OtherFragment"
+        android:label="@string/nav_bar_chat"
+        tools:layout="@layout/fragment" />
+
+    <fragment
+        android:id="@+id/nav_bar_menu"
+        android:name="com.example.fitnessapp.feature.other.ui.OtherFragment"
+        android:label="@string/nav_bar_menu"
+        tools:layout="@layout/fragment" />
+</navigation>
