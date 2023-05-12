@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnessapp.R
 import com.example.fitnessapp.base.state.LoadingState
-import com.example.fitnessapp.feature.schedule.model.LessonModel
+import com.example.fitnessapp.feature.schedule.model.ScheduleListItem
 import com.example.fitnessapp.feature.schedule.ui.recycler.LessonsListAdapter
 import com.example.fitnessapp.feature.schedule.viewModel.ScheduleViewModel
 import kotlinx.coroutines.launch
@@ -43,7 +43,7 @@ class LessonsFragment : Fragment() {
                 viewModel.state.collect { state ->
                     when (val loadingState = state.loadingState) {
                         LoadingState.Loading -> showLoading()
-                        LoadingState.Success -> showSuccess(state.lessons)
+                        LoadingState.Success -> showSuccess(state.scheduleItems)
                         is LoadingState.Error -> showError(loadingState.message)
                     }
                 }
@@ -58,11 +58,11 @@ class LessonsFragment : Fragment() {
         view?.findViewById<LinearLayout>(R.id.layout)?.visibility = View.GONE
     }
 
-    private fun showSuccess(lessons: List<LessonModel>) {
+    private fun showSuccess(scheduleItems: List<ScheduleListItem>) {
         view?.findViewById<ConstraintLayout>(R.id.loading_state)?.visibility = View.GONE
         view?.findViewById<ConstraintLayout>(R.id.error_state)?.visibility = View.GONE
         view?.findViewById<LinearLayout>(R.id.layout)?.visibility = View.VISIBLE
-        lessonsAdapter.updateList(lessons)
+        lessonsAdapter.updateList(scheduleItems)
     }
 
     private fun showError(error: String) {
